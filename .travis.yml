@@ -10,7 +10,7 @@ before_install:
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  - gcloud auth activate-account --key-file travis-deployer-svc-ac.json
+  - gcloud auth activate-service-account --key-file travis-deployer-svc-ac.json
   - gcloud config set project multi-k8s-285403
   - gcloud config set compute/zone australia-southeast1-b
   - gcloud container clusters get-credentials multi-cluster
