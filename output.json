@@ -1,0 +1,25 @@
+map[apiVersion:v1 items:[map[apiVersion:v1 kind:Pod metadata:map[creationTimestamp:2020-08-07T08:17:33Z generateName:my-release-ingress-nginx-controller-6758cc8f45- labels:ma
+p[app.kubernetes.io/component:controller app.kubernetes.io/instance:my-release app.kubernetes.io/name:ingress-nginx pod-template-hash:6758cc8f45] name:my-release-ingress-ngin
+x-controller-6758cc8f45-ndrs4 namespace:default ownerReferences:[map[apiVersion:apps/v1 blockOwnerDeletion:true controller:true kind:ReplicaSet name:my-release-ingress-nginx-
+controller-6758cc8f45 uid:4bbfd6c9-51ee-4862-853a-a3c9d482ef26]] resourceVersion:797904 selfLink:/api/v1/namespaces/default/pods/my-release-ingress-nginx-controller-6758cc8f4
+5-ndrs4 uid:73221018-8e4a-4705-a96a-55d35b99f6ae] spec:map[containers:[map[args:[/nginx-ingress-controller --publish-service=$(POD_NAMESPACE)/my-release-ingress-nginx-control
+ler --election-id=ingress-controller-leader --ingress-class=nginx --configmap=$(POD_NAMESPACE)/my-release-ingress-nginx-controller --validating-webhook=:8443 --validating-web
+hook-certificate=/usr/local/certificates/cert --validating-webhook-key=/usr/local/certificates/key] env:[map[name:POD_NAME valueFrom:map[fieldRef:map[apiVersion:v1 fieldPath:
+metadata.name]]] map[name:POD_NAMESPACE valueFrom:map[fieldRef:map[apiVersion:v1 fieldPath:metadata.namespace]]]] image:us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller:
+v0.34.1@sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20 imagePullPolicy:IfNotPresent lifecycle:map[preStop:map[exec:map[command:[/wait-shutdown]]]] li
+venessProbe:map[failureThreshold:5 httpGet:map[path:/healthz port:10254 scheme:HTTP] initialDelaySeconds:10 periodSeconds:10 successThreshold:1 timeoutSeconds:1] name:control
+ler ports:[map[containerPort:80 name:http protocol:TCP] map[containerPort:443 name:https protocol:TCP] map[containerPort:8443 name:webhook protocol:TCP]] readinessProbe:map[f
+ailureThreshold:3 httpGet:map[path:/healthz port:10254 scheme:HTTP] initialDelaySeconds:10 periodSeconds:10 successThreshold:1 timeoutSeconds:1] resources:map[requests:map[cp
+u:100m memory:90Mi]] securityContext:map[allowPrivilegeEscalation:true capabilities:map[add:[NET_BIND_SERVICE] drop:[ALL]] runAsUser:101] terminationMessagePath:/dev/terminat
+ion-log terminationMessagePolicy:File volumeMounts:[map[mountPath:/usr/local/certificates/ name:webhook-cert readOnly:true] map[mountPath:/var/run/secrets/kubernetes.io/servi
+ceaccount name:my-release-ingress-nginx-token-mk8w8 readOnly:true]]]] dnsPolicy:ClusterFirst enableServiceLinks:true nodeName:gke-multi-cluster-default-pool-c14d4632-ngpl pri
+ority:0 restartPolicy:Always schedulerName:default-scheduler securityContext:map[] serviceAccount:my-release-ingress-nginx serviceAccountName:my-release-ingress-nginx termina
+tionGracePeriodSeconds:300 tolerations:[map[effect:NoExecute key:node.kubernetes.io/not-ready operator:Exists tolerationSeconds:300] map[effect:NoExecute key:node.kubernetes.
+io/unreachable operator:Exists tolerationSeconds:300]] volumes:[map[name:webhook-cert secret:map[defaultMode:420 secretName:my-release-ingress-nginx-admission]] map[name:my-r
+elease-ingress-nginx-token-mk8w8 secret:map[defaultMode:420 secretName:my-release-ingress-nginx-token-mk8w8]]]] status:map[conditions:[map[lastProbeTime:<nil> lastTransitionT
+ime:2020-08-07T08:17:33Z status:True type:Initialized] map[lastProbeTime:<nil> lastTransitionTime:2020-08-07T08:18:03Z status:True type:Ready] map[lastProbeTime:<nil> lastTra
+nsitionTime:2020-08-07T08:18:03Z status:True type:ContainersReady] map[lastProbeTime:<nil> lastTransitionTime:2020-08-07T08:17:33Z status:True type:PodScheduled]] containerSt
+atuses:[map[containerID:docker://408fe1f879e47dff8ad8583c4357088e2a24f22153caafbbc495d037657f910d image:us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller@sha256:0e072dddd
+1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20 imageID:docker-pullable://us.gcr.io/k8s-artifacts-prod/ingress-nginx/controller@sha256:0e072dddd1f7f8fc8909a2ca6f65e76
+c5f0d2fcfb8be47935ae3457e8bbceb20 lastState:map[] name:controller ready:true restartCount:0 state:map[running:map[startedAt:2020-08-07T08:17:52Z]]]] hostIP:10.152.0.3 phase:R
+unning podIP:10.52.1.11 qosClass:Burstable startTime:2020-08-07T08:17:33Z]]] kind:List metadata:map[resourceVersion: selfLink:]]prashant_verma_au@cloudshell:~$
